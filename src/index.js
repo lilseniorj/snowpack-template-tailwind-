@@ -1,3 +1,5 @@
+import { registerImage } from "./lazy";
+
 // crear una imagen
 // agregar #imagen
 // imagenes aleatorias
@@ -29,6 +31,7 @@ const addButton = document.querySelector('button')
 const addImage = () => {
   const newImagenAleatoria = createImageNote();
   mountNode.append(newImagenAleatoria);
+  registerImage(newImagenAleatoria);
 };
 
 addButton.addEventListener("click", addImage);
